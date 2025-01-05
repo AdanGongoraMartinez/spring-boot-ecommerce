@@ -22,6 +22,27 @@ module.exports = {
       '5xl': '3.052rem',
     },
     extend: {},
+    daisyui: {
+      themes: [
+        {
+          'fantasy': {
+            primary: '#0000ff',
+            'primary-content': 'white',
+            secondary: '#F6F6F6',
+            neutral: '#E8E8E8',
+          },
+        },
+      ],
+      base: true,
+      styled: true,
+      utils: true,
+      prefix: '',
+      logs: true,
+      themeRoot: ':root'
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui')
+  ],
 };
